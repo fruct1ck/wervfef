@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D-принтер в начальной школе</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background-color: #f9f9f9; 
+      color: #333; 
+    }
+    header { 
+      background-color: #f80101; 
+      color: rgb(0, 0, 0); 
+      padding: 20px; 
+      text-align: center; 
+    }
+    .tabs { 
+      background-color: #dff0ff; 
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+    }
+    .tab-button { 
+      padding: 12px 20px; 
+      background-color: transparent; 
+      border: none; 
+      cursor: pointer; 
+      font-size: 16px; 
+      color: #ffffff; 
+      font-weight: bold; 
+      transition: all 0.3s ease; 
+    }
+    .tab-button:hover { 
+      background-color: #c8e0f8; 
+    }
+    .tab-button.active { 
+      background-color: #ff2508; 
+      color: rgb(0, 0, 0); 
+    }
+    .tab-content { 
+      display: none; 
+      padding: 20px; 
+      max-width: 1000px; 
+      margin: auto; 
+      background-color: rgb(255, 255, 255); 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+      border-radius: 0 0 5px 5px; 
+    }
+    .tab-content.active { 
+      display: block; 
+    }
+    h2 { 
+      color: #000000; 
+      margin-top: 0; 
+    }
+    footer { 
+      background-color: #eaecee00; 
+      color: rgb(17, 7, 7); 
+      text-align: center; 
+      padding: 10px; 
+      margin-top: 30px; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Внедрение 3D-принтера в начальную школу</h1>
+    <p>Современное образование для будущих новаторов</p>
+  </header>
+  
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'about')">О курсе</button>
+    <button class="tab-button" onclick="openTab(event, 'teachers')">Учителям</button>
+    <button class="tab-button" onclick="openTab(event, 'students')">Ученикам</button>
+    <button class="tab-button" onclick="openTab(event, 'results')">Результаты</button>
+    <button class="tab-button" onclick="openTab(event, 'contacts')">Контакты</button>
+  </div>
+  
+  <div id="about" class="tab-content active">
+    <h2>О курсе</h2>
+   
+    <p>Курс рассчитан на учеников 7–11 лет, длится 1 учебный год. Учащиеся познакомятся с 3D-печатью, основами моделирования в Tinkercad, создадут простые модели и научатся применять знания на практике. </p>
+    <h2>📚 Формат проведения курса: <h2>
+    <p>Продолжительность: 1 учебный год (2 семестра)</p>
+    <p>Частота: 1 занятие в неделю (по 45–60 минут)</p>
+    <p>Формат: очные или комбинированные занятия (в классе + задания дома)</p>
+    <p> Группа: 8–12 учеников</p>
+    <p>Техническое обеспечение: 1 3D-принтер на класс + ноутбуки/ПК с доступом в интернет</p>
+    </p>
+  </div>
+  
+  <div id="teachers" class="tab-content">
+    <h2>Учителям</h2>
+    <p>Предоставляются методические материалы, инструкции по работе с принтером, рекомендации по безопасности и планам уроков. Поддержка по вопросам эксплуатации и обучения.</p>
+    <p>Мы подготовили пошаговые руководства для учителей без технического опыта, чтобы каждый мог легко освоить технологию 3D-печати.</p>
+  </div>
+  
+  <div id="students" class="tab-content">
+    <h2>Ученикам</h2>
+    <p>Видеоуроки, шаблоны моделей, идеи для проектов — всё, что нужно для интересной и познавательной работы. Обучение в форме игры и экспериментов.</p>
+    <p>Дети смогут создавать собственные проекты, начиная от простых фигур до функциональных предметов для школы и дома.</p>
+  </div>
+  
+  <div id="results" class="tab-content">
+    <h2>Результаты</h2>
+    <p>Проект уже опробован в нескольких школах. Ученики с удовольствием участвуют, а учителя отмечают рост интереса к технологиям. Посмотрите галерею работ и отзывы участников.</p>
+    <p>Наши ученики уже создали более 500 различных моделей, многие из которых используются в учебном процессе.</p>
+  </div>
+  
+  <div id="contacts" class="tab-content">
+    <h2>Контакты</h2>
+    <p>href="mailto:info@3dschool.ru">akniyetbaizakova@gmail.com</a></li>
+    <li>Телефон: Битенова Жасмина:+7 705 883 4824 Байзакова Акниет:+7 700 678 7754</li>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Проект "3D-принтер в школе"</p>
+  </footer>
+
+  <script>
+    function openTab(evt, tabName) {
+      // Скрыть все вкладки
+      var tabContents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+      
+      // Убрать активный класс у всех кнопок
+      var tabButtons = document.getElementsByClassName("tab-button");
+      for (var i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+      
+      // Показать текущую вкладку и сделать кнопку активной
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
+ 
+
+
+
+
+
+ 
+
+
+
